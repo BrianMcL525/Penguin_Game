@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Penguin Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+    <!-- This is the frame for our game. It holds and centers all other elements-->
+    <div id ="gameholder">
+        <div id ="title"></div>
+        <div class ="mound1"></div>
+        <div class ="mound2"></div>
+        <div class ="mound3"></div>
+        <div class ="mound4"></div>
+        <div class ="mound5"></div>
+        <div class ="mound6"></div>
+        <div class ="mound7"></div>
+        <div class ="mound8"></div>
+        <div class ="mound9"></div>
+    </div>
+    <script>
+        var yeti = Math.floor(Math.random() * 9 + 1)
+        document.getElementsByClassName("mound" + yeti)[0].setAttribute("id", "yeti");
+        document.getElementById("yeti").addEventListener("click", function(){
+            alert("YOU LOSE!!!")
+        })
+    </script>
+</body>
+</html>
